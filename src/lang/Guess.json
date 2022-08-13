@@ -1,0 +1,323 @@
+{
+  "options": {
+    "en": "Options",
+    "de": "Optionen",
+    "fr": "Préférences"
+  },
+  "saving": {
+    "en": "Saving",
+    "de": "Speichert",
+    "fr": "Sauve"
+  },
+  "hints": {
+    "en": "Hints:",
+    "de": "Hinweise:",
+    "fr": "Astuces"
+  },
+  "on": {
+    "en": "On",
+    "de": "Ein",
+    "fr": "On"
+  },
+  "off": {
+    "en": "Off",
+    "de": "Aus",
+    "fr": "Off"
+  },
+  "reloadHint": {
+    "en": "Changing this option loads a new Pokémon.",
+    "de": "Das Ändern dieser Einstellung lädt ein neues Pokémon.",
+    "fr": "Changer cette option charge un nouveau Pokémon."
+  },
+  "legendary": {
+    "en": "Legendary",
+    "de": "Legendär",
+    "fr": "Légendaire"
+  },
+  "mythical": {
+    "en": "Mythical",
+    "de": "Mysteriös",
+    "fr": "Fabuleux"
+  },
+  "pokemonGenerations": {
+    "en": "Pokémon generations",
+    "de": "Pokémon-Generationen",
+    "fr": "Générations Pokémon"
+  },
+  "generationNotice": {
+    "en": "Currently, generations 1-8 are available",
+    "de": "Aktuell werden die Generationen 1-8 unterstützt.",
+    "fr": "Actuellement, les générations 1 à 8 sont disponibles."
+  },
+  "imageOptions": {
+    "en": "Pokémon image options",
+    "de": "Pokémon-Bild-Einstellungen",
+    "fr": "Options d'image Pokémon"
+  },
+  "showImage": {
+    "en": "Show Pokémon silhoutte",
+    "de": "Pokémon-Silhouetten anzeigen",
+    "fr": "Afficher la silhouette de Pokémon"
+  },
+  "revealCaughtImage": {
+    "en": "Reveal Pokémon already caught",
+    "de": "Bereits gefangene Pokémon aufdecken",
+    "fr": "Révélez les Pokémon déjà capturés"
+  },
+  "showHints": {
+    "en": "Show Pokémon hints",
+    "de": "Pokémon-Hinweise anzeigen",
+    "fr": "Afficher les indices Pokémon"
+  },
+  "letterHints": {
+    "en": "Allow letter hints",
+    "de": "Buchstaben-Hinweise erlauben",
+    "fr": "Autoriser les indices de lettre"
+  },
+  "showGenerations": {
+    "en": "Show generation hint",
+    "de": "Generation anzeigen",
+    "fr": "Afficher l'indice de génération"
+  },
+  "showIndex": {
+    "en": "Show Pokédex index",
+    "de": "Pokédex-Index anzeigen",
+    "fr": "Afficher l'index"
+  },
+  "showType": {
+    "en": "Show Pokémon types",
+    "de": "Pokémon-Typen anzeigen",
+    "fr": "Afficher les types de Pokémon"
+  },
+  "supportlayer": {
+    "en": "This game is a fan project for fellow Pokémon fans. It is and always will be completely free. It doesn't use cookies or tracking technologies. It uses the localStorage-API to locally save the state of your game and application. If you want to show your support, tell your friends! The rights to the artwork, names and designs belong to Nintendo. If you have an issue with this project, you can contact me here:",
+    "de": "Dieses Spiel ist ein Projekt von Fans, für Fans. Es ist und wird immer kostenlos und werbefrei sein. Es werden keine Cookies oder Tracking-Libraries benutzt. Ich benutze die localStorage-API, um lokal deinen Spielstand und deine Anwendung zu speichern. Wenn du das Projekt unterstützen möchtest, zeig es deinen Freunden! Die Rechte an den Designs und Namen liegen bei Nintendo. Falls Rückfragen zu diesem Projekt bestehen, kann ich hier kontaktiert werden:",
+    "fr": "Ce jeu est un projet de fan pour les autres fans de Pokémon. Il est et sera toujours entièrement gratuit. Il n'utilise pas de cookies ou de technologies de suivi. Il utilise l'API localStorage pour enregistrer localement l'état de votre jeu et de votre application. Si vous voulez montrer votre soutien, dites-le à vos amis ! Les droits sur les illustrations, les noms et les designs appartiennent à Nintendo. Si vous avez un problème avec ce projet, vous pouvez me contacter ici :"
+  },
+  "encounterOptions": {
+    "en": "Encounter options",
+    "de": "Begegnungseinstellungen",
+    "fr": "Options de rencontre"
+  },
+  "onlyUncaughtPokemon": {
+    "en": "Only uncaught Pokémon",
+    "de": "Nur ungefangene Pokémon",
+    "fr": "Seuls les Pokémon non attrapés"
+  },
+  "keyboardOptions": {
+    "en": "Keyboard options",
+    "de": "Tastaturoptionen",
+    "fr": "Options de clavier"
+  },
+  "alphabeticalKeyboard": {
+    "en": "Use alphabetical keyboard",
+    "de": "Benutze alphabetische Tastatur",
+    "fr": "Utiliser le clavier alphabétique"
+  },
+  "noPokemon": {
+    "en": "No Pokémon came... try changing the encounter options!",
+    "de": "Es scheint kein Pokémon zu kommen... Versuche, die Begnungseinstellungen zu ändern!",
+    "fr": "Aucun Pokémon n'est venu... essayez de changer les options de rencontre !"
+  },
+  "checkGameOptions": {
+    "en": "Perhaps you already caught all Pokémon for your current game settings!",
+    "de": "Vielleicht hast du für deine aktuellen Einstellungen alle Pokémon gefangen!",
+    "fr": "Peut-être avez-vous déjà attrapé tous les Pokémon pour vos paramètres de jeu actuels !"
+  },
+  "difficulty": {
+    "en": "Difficulty",
+    "de": "Schwierigkeit",
+    "fr": "Difficulté"
+  },
+  "infiniteGuesses": {
+    "en": "Infinite guesses",
+    "de": "Unendliche Versuche",
+    "fr": "Suppositions infinies"
+  },
+  "oneGuessOnly": {
+    "en": "One guess only",
+    "de": "1 Versuch-Modus",
+    "fr": "Une supposition seulement"
+  },
+  "showPartOfImage": {
+    "en": "Show only part of the silhouette",
+    "de": "Zeige nur einen Teil des Umrisses",
+    "fr": "Afficher seulement une partie de la silhouette"
+  },
+  "showPokemonOnFlee": {
+    "en": "Reveal Pokémon on fleeing",
+    "de": "Enthülle Pokémon, wenn es flüchtet",
+    "fr": "Révéler les Pokémon en fuyant"
+  },
+  "feedbackOptions": {
+    "right": {
+      "0": {
+        "en": "Cool!",
+        "de": "Nice!",
+        "fr": "Cool"
+      },
+      "1": {
+        "en": "Awesome.",
+        "de": "Super!",
+        "fr": "Impressionnante"
+      },
+      "2": {
+        "en": "Correct!",
+        "de": "Richtig!",
+        "fr": "Exact!"
+      },
+      "3": {
+        "en": "That's it!",
+        "de": "Genau!",
+        "fr": "C'est ça!"
+      },
+      "4": {
+        "en": "Yeah!",
+        "de": "Yeah!",
+        "fr": "Yeah!"
+      }
+    },
+    "wrong": {
+      "0": {
+        "en": "Whoops...",
+        "de": "Ups...",
+        "fr": "Whoops..."
+      },
+      "1": {
+        "en": "That's not it...",
+        "de": "Das war's nicht...",
+        "fr": "Ce n'est pas ça..."
+      },
+      "2": {
+        "en": "Don't worry, try again!",
+        "de": "Versuch es nochmal!",
+        "fr": "Ne vous inquiétez pas, réessayez !"
+      }
+    },
+    "win": {
+      "en": " was caught! Well done!",
+      "de": " wurde gefangen! Super gemacht!",
+      "fr": " a été attrapé ! Bien fait!"
+    },
+    "fail": {
+      "en": "It fled...",
+      "de": "Es ist geflohen...",
+      "fr": "ça s'est enfui..."
+    },
+    "failReveal": {
+      "en": " fled...",
+      "de": " ist geflohen...",
+      "fr": " s'est enfui..."
+    },
+    "perfect": {
+      "en": " was perfectly caught! Wow!",
+      "de": " wurde perfekt gefangen! Super!",
+      "fr": " a été parfaitement pris ! Ouah!"
+    },
+    "duplicate": {
+      "en": "You already guessed this letter.",
+      "de": "Diesen Buchstaben hast du schon geraten.",
+      "fr": "Vous avez déjà deviné cette lettre."
+    }
+  },
+  "types": {
+    "normal":  {
+      "en": "Normal",
+      "de": "Normal",
+      "fr": "Normal"
+    },
+    "kampf": {
+      "en": "Fighting",
+      "de": "Kampf",
+      "fr": "Combat"
+    },
+    "flug":  {
+      "en": "Flying",
+      "de": "Flug",
+      "fr": "Vol"
+    },
+    "gift": {
+      "en": "Poison",
+      "de": "Gift",
+      "fr": "Poison"
+    },
+    "boden":  {
+      "en": "Ground",
+      "de": "Boden",
+      "fr": "Sol"
+    },
+    "gestein": {
+      "en": "Rock",
+      "de": "Gestein",
+      "fr": "Roche"
+    },
+    "käfer":  {
+      "en": "Bug",
+      "de": "Käfer",
+      "fr": "Insecte"
+    },
+    "geist": {
+      "en": "Ghost",
+      "de": "Geist",
+      "fr": "Spectre"
+    },
+    "stahl":  {
+      "en": "Steel",
+      "de": "Stahl",
+      "fr": "Acier"
+    },
+    "feuer": {
+      "en": "Fire",
+      "de": "Feuer",
+      "fr": "Feu"
+    },
+    "wasser":  {
+      "en": "Water",
+      "de": "Wasser",
+      "fr": "Eau"
+    },
+    "pflanze": {
+      "en": "Grass",
+      "de": "Pflanze",
+      "fr": "Plante"
+    },
+    "elektro":  {
+      "en": "Electric",
+      "de": "Elektro",
+      "fr": "Élektrik"
+    },
+    "psycho": {
+      "en": "Psychic",
+      "de": "Psycho",
+      "fr": "Psy"
+    },
+    "eis":  {
+      "en": "Ice",
+      "de": "Eis",
+      "fr": "Glace"
+    },
+    "drache": {
+      "en": "Dragon",
+      "de": "Drache",
+      "fr": "Dragon"
+    },
+    "unlicht":  {
+      "en": "Dark",
+      "de": "Unlicht",
+      "fr": "Ténébres"
+    },
+    "fee": {
+      "en": "Fairy",
+      "de": "Fee",
+      "fr": "Féé"
+    },
+    "unbekannt":  {
+      "en": "Unknown",
+      "de": "Unbekannt"
+    },
+    "schatten": {
+      "en": "Shadow",
+      "de": "Schatten"
+    }
+  }
+}

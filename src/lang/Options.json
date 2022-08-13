@@ -1,0 +1,42 @@
+{
+  "name": {
+    "en": "Your name",
+    "de": "Dein Name",
+    "fr": "Votre nom"
+  },
+  "namePlaceholder": {
+    "en": "Enter your name!",
+    "de": "Gib deinen Namen ein!",
+    "fr": "Entrez votre nom!"
+  },
+  "showNameBelowClock": {
+    "en": "Show your name below the clock?",
+    "de": "Deinen Namen unter der Uhr anzeigen?",
+    "fr": "Afficher votre nom sous l'horloge?"
+  },
+  "favoriteColor": {
+    "en": "Your favorite colour",
+    "de": "Deine Lieblingsfarbe",
+    "fr": "Ta couleur préférée"
+  },
+  "lang": {
+    "en": "Your language",
+    "de": "Deine Sprache",
+    "fr": "Votre langue"
+  },
+  "save": {
+    "en": "Save",
+    "de": "Speichern",
+    "fr": "Enregistrer"
+  },
+  "disclaimer": {
+    "en": "This application is a fan project. If you have any questions or wanna reach out, contact me on Twitter:",
+    "de": "Diese Anwendung ist ein Fanprojekt. Falls du irgendwelche Fragen hast oder mich kontaktieren möchstest, kannst du das auf Twitter tun:",
+    "fr": "Cette application est un projet de fan. Si vous avez des questions ou souhaitez me contacter, contactez-moi sur Twitter :"
+  },
+  "gameBoyMode": {
+    "en": "Activate retro mode",
+    "de": "Retro-Modus aktivieren",
+    "fr": "Activer le mode rétro"
+  }
+}

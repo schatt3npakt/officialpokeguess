@@ -1,0 +1,62 @@
+{
+  "lastCaughtPokemon": {
+    "en": "Last caught Pokémon: ",
+    "de": "Letztes gefangenes Pokémon: ",
+    "fr": "Dernier Pokémon attrapé: "
+  },
+  "pokemonSeen": {
+    "en": "Pokémon seen: ",
+    "de": "Gesehene Pokémon: ",
+    "fr": "Pokémon vu: "
+  },
+  "pokemonCaught": {
+    "en": "Pokémon caught: ",
+    "de": "Gefangene Pokémon: ",
+    "fr": "Pokémon attrapé: "
+  },
+  "collectorStatistic": {
+    "en": "Your collector statistics",
+    "de": "Deine Sammlerstatistik",
+    "fr": "Vos statistiques de collecteur"
+  },
+  "noPokemonCaught": {
+    "en": "-",
+    "de": "-",
+    "fr": "-"
+  },
+  "legendaryPokemonCaught": {
+    "en": "Legendary Pokémon caught: ",
+    "de": "Legendäre gefangene Pokémon: ",
+    "fr": "Pokémon légendaire: "
+  },
+  "mythicalPokemonCaught": {
+    "en": "Mythical Pokémon caught: ",
+    "de": "Mysteriöse gefangene Pokémon: ",
+    "fr": "Pokémon fabuleux: "
+  },
+  "pokemonPerfectlyCaught": {
+    "en": "Perfectly caught Pokémon: ",
+    "de": "Perfekt gefangene Pokémon: ",
+    "fr": "Pokémon parfaitement attrapé: "
+  },
+  "pokemonStreak": {
+    "en": "Catching streak: ",
+    "de": "Fangserie: ",
+    "fr": "Série de rattrapage: "
+  },
+  "resetData": {
+    "en": "Reset progress",
+    "de": "Fortschritt zurücksetzen",
+    "fr": "Réinitialiser"
+  },
+  "reallyResetData": {
+    "en": "Really reset progress",
+    "de": "Fortschritt wirklich zurücksetzen",
+    "fr": "Réinitialiser"
+  },
+  "resetDataQuestion": {
+    "en": "Are you sure? You will lose all your caught Pokémon!",
+    "de": "Bist du sicher? Du wirst all deine gefangenen Pokémon verlieren!",
+    "fr": "Êtes-vous sûr? Vous perdrez tous vos Pokémon capturés!"
+  }
+}

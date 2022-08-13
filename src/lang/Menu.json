@@ -1,0 +1,27 @@
+{
+  "options": {
+    "en": "Options",
+    "de": "Optionen",
+    "fr": "Préférences"
+  },
+  "r0": {
+    "en": "Game",
+    "de": "Spiel",
+    "fr": "Jeu"
+  },
+  "r1": {
+    "en": "Collector profile",
+    "de": "Sammlerprofil",
+    "fr": "Profil du collectionneur"
+  },
+  "r2": {
+    "en": "Pokédex",
+    "de": "Pokédex",
+    "fr": "Pokédex"
+  },
+  "r3": {
+    "en": "Game Modes",
+    "de": "Spielmodi",
+    "fr": "Game Modes"
+  }
+}

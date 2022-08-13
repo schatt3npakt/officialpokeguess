@@ -1,0 +1,12 @@
+{
+  "update": {
+    "en": "Update",
+    "de": "Aktualisieren",
+    "fr": "Réactualiser"
+  },
+  "updateAvailable": {
+    "en": "An update is available!",
+    "de": "Neue Inhalte sind verfügbar!",
+    "fr": "Une mise à jour est disponible!"
+  }
+}

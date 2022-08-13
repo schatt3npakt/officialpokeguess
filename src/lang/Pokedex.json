@@ -1,0 +1,27 @@
+{
+  "lastCaught": {
+    "en": "Last caught: ",
+    "de": "Zuletzt gefangen: ",
+    "fr": "Dernière prise: "
+  },
+  "perfect": {
+    "en": "Perfect!",
+    "de": "Perfekt!",
+    "fr": "Parfait!"
+  },
+  "findUncaught": {
+    "en": "Find uncaught pokémon?",
+    "de": "Ungefangene Pokémon finden?",
+    "fr": "Trouver un pokémon non attrapé?"
+  },
+  "search": {
+    "en": "Search",
+    "de": "Suchen",
+    "fr": "Chercher"
+  },
+  "placeholder": {
+    "en": "Type a pokémon name and hit search",
+    "de": "Gib einen Pokémonnamen ein!",
+    "fr": "Tapez un nom de pokémon et cliquez sur rechercher"
+  }
+}
