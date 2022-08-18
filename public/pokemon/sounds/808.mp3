@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Made with love for Taisia Tikhnovetskaya <3 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#377ad3">
+    <meta name="msapplication-TileColor" content="#377ad3">
+    <meta name="theme-color" content="#377ad3">
+    <title>PokémonCries</title>
+    <meta name="description" content="Guess the Pokémon by its cry! Test yourself and play the game."/>
+    <meta name="keywords" content="Pokemon, Pokémon, Cries, Cry, oldscool, Tasia, Game"/>
+    <meta property="og:title" content="Pokémon Cries"/>
+    <meta property="og:site_name" content="Pokémon Cries"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://pokemoncries.com"/>
+    <meta property="og:description" content="Guess the Pokémon by its cry! Test yourself and play the game."/>
+    <meta property="og:image" content="https://pokemoncries.com/logo.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta name="theme-color" content="#377AD3">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
+
+    <!-- It's nice to know how many people use this -->
+    <!-- disable for now until i have time for the gdpr -->
+    <!-- <script src="https://cdn.ravenjs.com/3.23.1/raven.min.js" crossorigin="anonymous"></script>
+    <script>
+      Raven.config('https://b8918b4c40e34c678041b84fc9daba61@sentry.io/303263').install()
+    </script> -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58665819-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-58665819-5', { 'anonymize_ip': true });
+    </script>
+    <style>
+      .only-show-in-ie {
+        display: none;
+      }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .only-show-in-ie {
+          display: block;
+        }
+      }
+    </style>
+
+  <link href="/main.3ff32b8001a13984214b.css" rel="stylesheet"></head>
+  <body>
+    <div class="only-show-in-ie" style="margin: 100px auto; width: 500px;">
+      <h1>Your browser is not supported, please use a current one.</h1>
+      <a href="https://www.mozilla.org/de/firefox/new/">Download Firefox for example.</a>
+    </div>
+    <div id="root">
+    </div>
+    <div id="preload-images">
+    </div>
+  <script type="text/javascript" src="/main.7e3dfa4e7c8a09fd91fb.js"></script></body>
+</html>

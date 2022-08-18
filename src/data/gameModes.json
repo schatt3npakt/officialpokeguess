@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "title": "casual",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1, 2, 3, 4, 5, 6, 7, 8
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": true,
+      "showPokeImage": true,
+      "revealCaught": true,
+      "showGenHint": true,
+      "showIndexHint": true,
+      "showTypeHint": true,
+      "showStreak": true,
+      "infiniteGuesses": true,
+      "oneGuessOnly": false,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": true
+    }
+  },
+  {
+    "id": 1,
+    "title": "oneShotClassic",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": false,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "showStreak": false,
+      "infiniteGuesses": false,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": false
+    }
+  },
+  {
+    "id": 2,
+    "title": "oneShotAll",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1, 2, 3, 4, 5, 6, 7, 8
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": false,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "showStreak": false,
+      "infiniteGuesses": false,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": false
+    }
+  },
+  {
+    "id": 3,
+    "title": "blind",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1, 2, 3, 4, 5, 6, 7, 8
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": false,
+      "showPokeImage": false,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "showStreak": false,
+      "infiniteGuesses": true,
+      "oneGuessOnly": false,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": true
+    }
+  }
+]

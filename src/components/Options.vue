@@ -11,7 +11,7 @@
           <div>
             <p class="label">{{ text.name[language] }}</p>
 
-            <input @keyup.enter="commitOptions" v-model="inputValue"  type="text" :placeholder="text.namePlaceholder[language]"/>
+            <input @keyup.enter="commitOptions" @keyup="playTypingHandler" v-model="inputValue"  type="text" :placeholder="text.namePlaceholder[language]"/>
           </div>
 
           <div>
@@ -29,6 +29,7 @@
           <div class="color-picker" :class="{gameboy: gameBoyModeIsActive}">
             <div
               @click="setColor(color)"
+              @mouseenter="playRolloverHandler()"
               v-for="color in colors"
               :key="color"
               :class="{active: color === currentColor}"
@@ -36,11 +37,17 @@
           </div>
         </div>
 
-        <div>
+        <div class="toggle-container">
           <Toggle
             @click.native="gameBoyModeClickHandler"
             :toggle-label="text.gameBoyMode[language]"
             :is-on="gameBoyModeIsActive"
+          />
+
+          <Toggle
+            @click.native="muteAudioClickHandler"
+            :toggle-label="text.muteAudio[language]"
+            :is-on="muteAudioIsActive"
           />
         </div>
 
@@ -50,6 +57,7 @@
           <div class="languages">
             <button
               v-for="lang in languages"
+              @mouseenter="playRolloverHandler()"
               @click="langClickHandler(lang.name)"
               :key="lang.id"
               :class="constructLanguageClass(lang.name)"
@@ -60,14 +68,18 @@
 
         <button class="submit enable" @click="this.commitOptions">{{ text.save[language] }}</button>
 
-        <p class="disclaimer">
-          {{ text.disclaimer[language] }} <br><br>
-          <a href="https://twitter.com/thebitheart" target="_blank" rel="noopener noreferrer">@bitheart</a><br><br>
+        <div class="disclaimer">
+          <div>
+            {{ text.disclaimer[language] }} <br><br>
+            <a href="https://twitter.com/thebitheart" target="_blank" rel="noopener noreferrer">@bitheart</a><br><br>
+          </div>
 
-          <a href="https://bitheart.de/imprint/" target="_blank">
-            <img class="logo" src="/img/logo.png" alt="">
-          </a>
-        </p>
+          <div>
+            <a href="https://bitheart.de/imprint/" target="_blank">
+              <img class="logo" src="/img/logo.png" alt="">
+            </a>
+          </div>
+        </div>
       </div>
     </Layer>
   </div>
@@ -76,6 +88,8 @@
 <script>
 import Layer from '@/components/Layer/Layer'
 import Toggle from '@/components/Atoms/Toggle'
+import { playToggleOnSound, playRolloverSound, playTypingSound, playConfirmSound } from '../AudioService'
+import { Howler } from 'howler'
 
 export default {
   components: {
@@ -94,6 +108,9 @@ export default {
     },
     gameBoyModeIsActive () {
       return this.$store.state.gameBoyModeIsActive
+    },
+    muteAudioIsActive () {
+      return this.$store.state.muteAudioIsActive
     },
     showNameBelowClockIsActive () {
       return this.$store.state.showUserNameBelowClock === 'true'
@@ -135,6 +152,12 @@ export default {
         return lang
       }
     },
+    playRolloverHandler () {
+      playRolloverSound()
+    },
+    playTypingHandler () {
+      playTypingSound()
+    },
     gameBoyModeClickHandler () {
       this.$store.state.gameBoyModeIsActive = !this.$store.state.gameBoyModeIsActive
 
@@ -156,6 +179,17 @@ export default {
         document.documentElement.style.setProperty('--theme-color', this.currentColor)
       }
     },
+    muteAudioClickHandler () {
+      this.$store.state.muteAudioIsActive = !this.$store.state.muteAudioIsActive
+
+      if (this.$store.state.muteAudioIsActive) {
+        Howler.mute(true)
+        localStorage.setItem('muteAudioIsActive', 'true')
+      } else {
+        Howler.mute(false)
+        localStorage.setItem('muteAudioIsActive', 'false')
+      }
+    },
     showNameBelowClockClickHandler () {
       if (this.$store.state.showUserNameBelowClock === 'true') {
         this.$store.state.showUserNameBelowClock = 'false'
@@ -167,6 +201,7 @@ export default {
     },
     langClickHandler (lang) {
       this.$store.commit('setLanguage', lang)
+      playToggleOnSound()
     },
     setColor (color) {
       this.$store.state.gameBoyModeIsActive = false
@@ -178,6 +213,7 @@ export default {
       document.querySelector('meta[name="theme-color"]').setAttribute('content', color)
       document.documentElement.style.setProperty('--theme-color', color)
       this.currentColor = color
+      playToggleOnSound()
     },
     commitOptions () {
       this.$store.commit('setThemeColor', this.currentColor)
@@ -185,6 +221,7 @@ export default {
       localStorage.setItem('themeColor', this.currentColor)
       localStorage.setItem('userName', this.inputValue)
       localStorage.setItem('language', this.$store.state.language)
+      playConfirmSound()
 
       let link = document.querySelector("link[rel~='icon']")
       if (!link) {
@@ -513,10 +550,16 @@ export default {
 }
 
 .disclaimer {
+  display: grid;
   color: var(--theme-color);
-  font-weight: 600;;
+  font-weight: 600;
   font-size: 18px;
   text-align: center;
+
+  @media (min-width: 720px) {
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+  }
 
   * {
     color: var(--theme-color);
@@ -527,6 +570,11 @@ export default {
   display: block;
   margin: auto;
   max-width: 100px;
+}
+
+.toggle-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @keyframes pop-in {

@@ -1,0 +1,50 @@
+{
+  "casual": {
+    "title": {
+      "en": "Casual",
+      "de": "Casual",
+      "fr": "Casual"
+    },
+    "description": {
+      "en": "Unlimited time, unlimited tries. Just sit back and relax!",
+      "de": "Unbegrenzte Zeit, unbegrenzte Versuche. Lehn dich zurück und schnapp' sie dir alle!",
+      "fr": "Unlimited time, unlimited tries. Just sit back and relax!"
+    }
+  },
+  "oneShotClassic": {
+    "title": {
+      "en": "One Shot Classic",
+      "de": "One Shot Classic",
+      "fr": "One Shot Classic"
+    },
+    "description": {
+      "en": "Only the original 151, one shot for every Pokémon. Can you do it?",
+      "de": "Nur die originalen 151. Ein Versuch pro Pokémon. Schaffst du es?",
+      "fr": "Only the original 151, one shot for every Pokémon. Can you do it?"
+    }
+  },
+  "oneShotAll": {
+    "title": {
+      "en": "One Shot",
+      "de": "One Shot",
+      "fr": "One Shot"
+    },
+    "description": {
+      "en": "One shot for Pokémon from every gen.",
+      "de": "Ein Versuch pro Pokémon aus allen Generationen.",
+      "fr": "One shot for Pokémon from every gen."
+    }
+  },
+  "blind": {
+    "title": {
+      "en": "Blind mode",
+      "de": "Blind mode",
+      "fr": "Blind mode"
+    },
+    "description": {
+      "en": "Infinite guesses, but that's all you get. No image, no hints.",
+      "de": "Endlose Versuche, aber das war's auch. Keine Hinweise, kein Bild.",
+      "fr": "Infinite guesses, but that's all you get. No image, no hints."
+    }
+  }
+}

@@ -59,6 +59,11 @@
     "de": "Pokémon-Silhouetten anzeigen",
     "fr": "Afficher la silhouette de Pokémon"
   },
+  "showPokemonCry": {
+    "en": "Show Pokémon cry button",
+    "de": "Pokémon-Ruf-Button anzeigen",
+    "fr": "Afficher le bouton Pokémon cry"
+  },
   "revealCaughtImage": {
     "en": "Reveal Pokémon already caught",
     "de": "Bereits gefangene Pokémon aufdecken",

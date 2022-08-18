@@ -1,3 +1,5 @@
+import { playMaximizeSound, playMinimizeSound } from '../AudioService'
+
 const pokemon = require('../data/pokemon')
 const legendaryPokemon = require('../data/legendaryPokemon.json')
 const mythicalPokemon = require('../data/mythicalPokemon.json')
@@ -32,9 +34,11 @@ const guessModule = {
       oneGuessOnly: false,
       showPartOfImage: false,
       imagePartFilter: 0,
-      showPokemonOnFlee: false
+      showPokemonOnFlee: false,
+      showPokemonCry: true
     },
     gameState: {
+      resetPokemonFromGameMode: false,
       firstPokemonLoaded: false,
       availablePokemon: 0,
       noPokemonAvailable: false,
@@ -135,6 +139,7 @@ const guessModule = {
 
       const resetPokemonAction = () => {
         if (wrapper) {
+          playMaximizeSound()
           wrapper.classList.add('resetting')
 
           window.setTimeout(() => {
@@ -157,6 +162,10 @@ const guessModule = {
             }
 
             gameState.guessFeedback = ''
+
+            window.setTimeout(() => {
+              playMinimizeSound()
+            }, 500)
 
             window.setTimeout(() => {
               wrapper.classList.remove('resetting')

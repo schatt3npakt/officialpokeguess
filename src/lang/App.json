@@ -8,5 +8,15 @@
     "en": "An update is available!",
     "de": "Neue Inhalte sind verfügbar!",
     "fr": "Une mise à jour est disponible!"
+  },
+  "audioNotice": {
+    "en": "This game features music and sounds. If you are on Safari, those sounds might not play unless you allow them.",
+    "de": "Dieses Spiel beinhaltet Soundeffekte und Musik. Wenn du Safari benutzt, werden sie möglicherweise nicht abgespielt, bis du Sounds erlaubst.",
+    "fr": "Ce jeu comprend des effets sonores et de la musique. Si vous utilisez Safari, ils peuvent ne pas jouer tant que vous n'autorisez pas les sons!"
+  },
+  "audioNoticeAccept": {
+    "en": "Close",
+    "de": "Schließen",
+    "fr": "Conclure"
   }
 }

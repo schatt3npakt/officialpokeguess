@@ -12,7 +12,7 @@
     <Layer direction="rtl" :is-closing="isClosing" :is-open="menuIsOpen">
       <ul>
         <li @click="layerTriggerClickHandler" v-for="(route, i) in routes" :key="i">
-          <router-link :to="route.path">
+          <router-link @mouseenter.native="hoverHandler()" :to="route.path">
             <svg v-if="route.icon === 'home'" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
                             <g>
@@ -68,7 +68,7 @@
         </li>
 
         <li @click="optionsClickHandler">
-          <div>
+          <div @mouseenter="hoverHandler()">
             <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
               <path class="st3" d="M93.3,42.4H90c-1.1-5.6-3.2-10.8-6.3-15.3l2.4-2.4c1.6-1.6,1.6-4.3,0-5.9L81.2,14c-1.6-1.6-4.3-1.6-5.9,0
@@ -91,6 +91,7 @@
 <script>
 import LayerTrigger from '@/components/Layer/LayerTrigger'
 import Layer from '@/components/Layer/Layer'
+import { playRolloverSound } from '../AudioService'
 
 export default {
   components: {
@@ -124,6 +125,9 @@ export default {
     }
   },
   methods: {
+    hoverHandler () {
+      playRolloverSound()
+    },
     constructKey (i) {
       return 'r' + i
     },

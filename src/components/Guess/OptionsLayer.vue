@@ -38,7 +38,7 @@
             {{ text.imageOptions[language] }}
           </p>
 
-          <ul>
+          <ul class="image-options">
             <li>
               <Toggle
                 :toggle-label="text.revealCaughtImage[language]"
@@ -100,6 +100,14 @@
                 :toggle-label="text.showType[language]"
                 @click.native="typeHintToggleClickHandler"
                 :is-on="showTypeHint"
+              />
+            </li>
+
+            <li>
+              <Toggle
+                :toggle-label="text.showPokemonCry[language]"
+                @click.native="cryToggleClickHandler"
+                :is-on="showPokemonCry"
               />
             </li>
           </ul>
@@ -252,6 +260,9 @@ export default {
     },
     showPokemonOnFlee () {
       return this.$store.state.guessModule.gameOptions.showPokemonOnFlee
+    },
+    showPokemonCry () {
+      return this.$store.state.guessModule.gameOptions.showPokemonCry
     }
   },
   data: function () {
@@ -300,6 +311,9 @@ export default {
     },
     hintToggleClickHandler () {
       this.$store.state.guessModule.gameOptions.hintsAllowed = !this.$store.state.guessModule.gameOptions.hintsAllowed
+    },
+    cryToggleClickHandler () {
+      this.$store.state.guessModule.gameOptions.showPokemonCry = !this.$store.state.guessModule.gameOptions.showPokemonCry
     },
     onlyUncaughtToggleClickHandler () {
       this.isGenToggleInteracted = true
@@ -488,6 +502,12 @@ export default {
     @media (min-width: 735px) {
       max-width: 370px;
     }
+  }
+}
+
+.image-options {
+  li {
+    margin-bottom: 15px;
   }
 }
 </style>

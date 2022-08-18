@@ -1,5 +1,5 @@
 <template>
-  <div class="layer-trigger" :class="{active: isActive}">
+  <div class="layer-trigger" @mouseenter="hoverHandler()" @click="clickHandler()" :class="{active: isActive}">
     <slot v-if="!isActive">
       <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
@@ -23,10 +23,23 @@
 </template>
 
 <script>
+import { playMaximizeSound, playMinimizeSound, playRolloverSound } from '../../AudioService'
 export default {
   name: 'LayerTrigger',
   props: {
     isActive: Boolean
+  },
+  methods: {
+    hoverHandler () {
+      playRolloverSound()
+    },
+    clickHandler () {
+      if (this.isActive) {
+        playMinimizeSound()
+      } else {
+        playMaximizeSound()
+      }
+    }
   }
 }
 </script>
@@ -51,6 +64,10 @@ export default {
   @media (min-width: 720px) {
     height: 45px;
     width: 45px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 
   &:active {

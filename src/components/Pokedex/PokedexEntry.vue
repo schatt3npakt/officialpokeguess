@@ -105,7 +105,7 @@ export default {
 <style lang="scss" scoped>
 .pokedex-entry {
   display: flex;
-  border: 1px solid var(--theme-color);
+  border: 3px solid var(--theme-color);
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
@@ -116,11 +116,11 @@ export default {
   }
 
   &.perfect {
-    border: 1px solid #EEE8AA;
+    border: 3px solid #EEE8AA;
     color: #EEE8AA;
 
     .gameboy & {
-      border: 1px solid var(--theme-color);
+      border: 3px solid var(--theme-color);
       color: var(--theme-color);
     }
   }

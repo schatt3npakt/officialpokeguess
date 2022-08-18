@@ -1,5 +1,5 @@
 <template>
-  <div class="toggle-wrapper">
+  <div class="toggle-wrapper" @mouseenter="hoverHandler()" @click="buttonClickHandler()">
     <span class="label" v-if="toggleLabel">{{toggleLabel}}</span>
 
     <button
@@ -66,6 +66,7 @@
 </template>
 
 <script>
+import { playRolloverSound, playToggleOffSound, playToggleOnSound } from '../../AudioService'
 export default {
   computed: {
     language () {
@@ -84,6 +85,18 @@ export default {
     onText: String,
     isOn: Boolean,
     type: String
+  },
+  methods: {
+    hoverHandler () {
+      playRolloverSound()
+    },
+    buttonClickHandler () {
+      if (this.isOn) {
+        playToggleOffSound()
+      } else {
+        playToggleOnSound()
+      }
+    }
   }
 }
 </script>
@@ -93,6 +106,12 @@ export default {
   display: block;
   position: relative;
   text-align: center;
+  transition: transform 0.25s ease-out;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &.disabled {
     .toggle.on {

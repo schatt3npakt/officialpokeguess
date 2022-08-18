@@ -14,6 +14,8 @@
         </div>
 
         <div v-else class="guess-wrapper-content">
+          <button @mouseenter="hoverhandler()" @click="resetButtonHandler()" class="pokemon-skip-button">Skip</button>
+
           <div class="pokeball-overlay">
             <svg class="top" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
@@ -130,12 +132,15 @@
           >
             <div
               class="letter"
+              @mouseenter="if(hintsAllowed) {hoverhandler()}"
               :class="{ignore: testForRevealingCharacter(letter)}"
               @click="letterClickHandler"
               v-for="(letter, index) in pokeNameArray"
               :key="index"
               :data-key-index="index"
             >{{letter}}</div>
+
+            <button v-show="playPokemonCry" @click="playCryHandler()" class="cry-hint">Play Cry</button>
 
             <div v-if="showGenHint" class="gen-hint">
               Gen {{ activePokemonGeneration }}
@@ -177,6 +182,7 @@
               :key="index"
             >
               <button
+                @mouseenter="hoverhandler()"
                 class="key"
                 :id="'key' + letter"
                 @click="keyClickHandler"
@@ -196,6 +202,7 @@
 </template>
 
 <script>
+import { playFleeSound, playGuessSound, playGuessWrongSound, playPokemonSound, playResetSound, playRolloverSound } from '../../AudioService'
 import PokemonService from '../../pokemonService'
 
 const pokemonService = new PokemonService()
@@ -353,6 +360,9 @@ export default {
     },
     showPokemonOnFlee () {
       return this.$store.state.guessModule.gameOptions.showPokemonOnFlee
+    },
+    playPokemonCry () {
+      return this.$store.state.muteAudioIsActive === false && this.$store.state.guessModule.gameOptions.showPokemonCry
     }
   },
   data: function () {
@@ -363,6 +373,13 @@ export default {
     }
   },
   methods: {
+    resetButtonHandler () {
+      playFleeSound()
+      this.resetPokemon(false)
+    },
+    hoverhandler () {
+      playRolloverSound()
+    },
     getKeyboardType () {
       if (this.$store.state.guessModule.gameOptions.useAlphabeticalKeyboard) {
         return 'alphabetical'
@@ -385,6 +402,9 @@ export default {
         timeStamp: date
       }
     },
+    playCryHandler () {
+      playPokemonSound(this.pokemonId)
+    },
     testForRevealingCharacter (char) {
       const regEx = new RegExp('[0-9\' :.,♂♀-♀♂]')
       return regEx.test(char)
@@ -403,6 +423,9 @@ export default {
 
       if (letters.length === revealedLetters.length) {
         pokeimage.classList.add('reveal')
+        window.setTimeout(() => {
+          playPokemonSound(this.pokemonId)
+        }, 500)
 
         for (const item of keys) {
           item.classList.add('disabled')
@@ -444,6 +467,7 @@ export default {
         })
 
         window.setTimeout(() => {
+          playResetSound()
           pokeBallOverlay.classList.add('revealed')
           this.resetPokemon()
         }, 4200)
@@ -461,6 +485,9 @@ export default {
         if (this.showPokemonOnFlee === false) {
           pokeimage.classList.add('flee')
           gameState.guessFeedback = this.text.feedbackOptions.fail[this.language]
+          window.setTimeout(() => {
+            playPokemonSound(this.pokemonId)
+          }, 500)
         } else {
           pokeimage.classList.add('flee-reveal')
           gameState.guessFeedback = pokemonService.getName(this.pokemonId, this.language) + this.text.feedbackOptions.failReveal[this.language]
@@ -484,6 +511,7 @@ export default {
         })
 
         window.setTimeout(() => {
+          playResetSound()
           this.resetPokemon()
         }, 1000)
       }
@@ -499,6 +527,8 @@ export default {
         return
       }
 
+      playGuessSound()
+
       const target = e.target
       target.classList.add('reveal')
       this.checkForWin()
@@ -511,6 +541,7 @@ export default {
       const gameState = this.$store.state.guessModule.gameState
 
       if (gameState.guessedLetters.includes(key)) {
+        playGuessWrongSound()
         gameState.guessFeedback = this.text.feedbackOptions.duplicate[this.language]
         return
       } else {
@@ -527,11 +558,14 @@ export default {
       target.classList.add('disabled')
       gameState.guesses++
       if (foundIndex.length === 0) {
+        playGuessWrongSound()
         target.classList.add('false')
         if (this.infiniteGuesses === false) {
           gameState.wrongGuesses++
         }
         gameState.guessFeedback = this.text.feedbackOptions.wrong[getRandomInt(0, 2)][this.language]
+      } else {
+        playGuessSound()
       }
 
       this.checkForWin()
@@ -539,6 +573,11 @@ export default {
     }
   },
   mounted: function () {
+    if (this.$store.state.guessModule.gameState.resetPokemonFromGameMode) {
+      this.resetPokemon(false)
+      this.$store.state.guessModule.gameState.resetPokemonFromGameMode = false
+    }
+
     if (this.$store.state.guessModule.gameState.pokeId === 0) {
       this.$store.commit('getRandomPokemon')
     }
@@ -609,6 +648,33 @@ export default {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
+}
+
+.pokemon-skip-button {
+  background-color: var(--theme-color);
+  color: var(--contrast-color);
+  padding: 5px;
+  position: fixed;
+  top: 55px;
+  left: 15px;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+  min-width: 50px;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 720px) {
+    top: 75px;
+    padding: 8px;
+    font-size: 14px;
+    min-width: 60px;
+  }
 }
 
 .guess-wrapper-content {
@@ -1131,6 +1197,27 @@ export default {
           &.last {
             animation: danger-fade 0.25s ease-in-out infinite;
           }
+        }
+      }
+
+      .cry-hint {
+        background-color: var(--theme-color);
+        color: var(--contrast-color);
+        padding: 2px;
+        border-radius: 10px;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        font-size: 10px;
+        display: none;
+
+        @media (min-width: 720px) {
+          display: block;
+          padding: 5px 10px;
+          font-size: 16px;
+          left: -97px;
+          top: 35px;
+          cursor: pointer;
         }
       }
 

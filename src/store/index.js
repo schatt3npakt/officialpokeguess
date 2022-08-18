@@ -14,6 +14,7 @@ export default new Vuex.Store({
     latitude: '51.4556',
     longitude: '7.0116',
     gameBoyModeIsActive: JSON.parse(localStorage.getItem('gameBoyModeIsActive')) || false,
+    muteAudioIsActive: JSON.parse(localStorage.getItem('muteAudioIsActive')) || false,
     menuIsOpen: false,
     minutes: '00',
     moodClass: '',

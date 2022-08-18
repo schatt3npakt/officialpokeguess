@@ -1,5 +1,13 @@
 <template>
   <div id="app" class="app" :class="{day: isDay, gameboy: gameBoyModeIsActive}">
+    <div v-show="this.showNotice === true" class="audio-notice" @click="showNoticeClickHandler()">
+      <div class="modal">
+        {{text.audioNotice[language]}}
+
+        <button>{{text.audioNoticeAccept[language]}}</button>
+      </div>
+    </div>
+
     <div class="update-hint" v-if="updateExists">
       {{text.updateAvailable[language]}}
       <button @click="refreshApp">
@@ -32,6 +40,7 @@ import Options from '@/components/Options.vue'
 import GeoService from '@/GeoService'
 import Toggle from '@/components/Atoms/Toggle'
 import update from '@/mixins/update'
+import { playBgm } from './AudioService'
 
 const texts = require('./lang/App.json')
 
@@ -56,12 +65,17 @@ export default {
   },
   data: function () {
     return {
-      text: texts
+      text: texts,
+      showNotice: true
     }
   },
   methods: {
     toggleDayTime () {
       this.$store.commit('setIsDay', !this.isDay)
+    },
+    showNoticeClickHandler () {
+      this.showNotice = false
+      playBgm()
     }
   },
   mixins: [update],
@@ -155,6 +169,15 @@ html {
   overflow: hidden;
 }
 
+::selection {
+  background: var(--theme-color) !important;
+  color: var(--contrast-color) !important;
+}
+::-moz-selection {
+  background: var(--theme-color) !important;
+  color: var(--contrast-color) !important;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
 
 * {
@@ -182,6 +205,48 @@ html {
 
   &__inner {
     height: 100%;
+  }
+
+  .audio-notice {
+    z-index: 6;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    .modal {
+      padding: 15px;
+      border: 3px solid var(--theme-color);
+      border-radius: 15px;
+      font-size: 20px;
+      color: var(--theme-color);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--contrast-color);
+      max-width: 400px;
+    }
+
+    button {
+      border: none;
+      border-radius: 15px;
+      background-color: var(--theme-color);
+      color: var(--contrast-color);
+      display: block;
+      margin: 15px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: transform 0.25s ease-in-out;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .update-hint {

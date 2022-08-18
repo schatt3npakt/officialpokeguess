@@ -38,5 +38,10 @@
     "en": "Activate retro mode",
     "de": "Retro-Modus aktivieren",
     "fr": "Activer le mode rétro"
+  },
+  "muteAudio": {
+    "en": "Mute audio",
+    "de": "Sound deaktivieren",
+    "fr": "Mute audio"
   }
 }
