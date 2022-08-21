@@ -46,5 +46,17 @@
       "de": "Endlose Versuche, aber das war's auch. Keine Hinweise, kein Bild.",
       "fr": "Infinite guesses, but that's all you get. No image, no hints."
     }
+  },
+  "sound": {
+    "title": {
+      "en": "Cry Guess!",
+      "de": "Cry Guess!",
+      "fr": "Cry Guess!"
+    },
+    "description": {
+      "en": "Can you guess the Pokémon, just from its cry?",
+      "de": "Kannst du ein Pokémon nur anhand seines Rufs erraten?",
+      "fr": "Can you guess the Pokémon, just from its cry?"
+    }
   }
 }

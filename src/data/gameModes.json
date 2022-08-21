@@ -25,11 +25,11 @@
   },
   {
     "id": 1,
-    "title": "oneShotClassic",
+    "title": "oneShotAll",
     "icon": "/img/logo.png",
     "gameOptions": {
       "activeGens": [
-        1
+        1, 2, 3, 4, 5, 6, 7, 8
       ],
       "maxHints": 3,
       "maxWrongGuesses": 6,
@@ -49,11 +49,11 @@
   },
   {
     "id": 2,
-    "title": "oneShotAll",
+    "title": "oneShotClassic",
     "icon": "/img/logo.png",
     "gameOptions": {
       "activeGens": [
-        1, 2, 3, 4, 5, 6, 7, 8
+        1
       ],
       "maxHints": 3,
       "maxWrongGuesses": 6,
@@ -93,6 +93,31 @@
       "showPartOfImage": false,
       "imagePartFilter": 0,
       "showPokemonOnFlee": true
+    }
+  },
+  {
+    "id": 4,
+    "title": "sound",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1, 2, 3, 4, 5, 6, 7, 8
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": false,
+      "showPokeImage": false,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "showStreak": false,
+      "infiniteGuesses": true,
+      "oneGuessOnly": false,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": true,
+      "showPokemonCry": true
     }
   }
 ]
