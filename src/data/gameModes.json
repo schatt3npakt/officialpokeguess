@@ -119,5 +119,31 @@
       "showPokemonOnFlee": true,
       "showPokemonCry": true
     }
+  },
+  {
+    "id": 5,
+    "title": "timerModeActive",
+    "icon": "/img/logo.png",
+    "gameOptions": {
+      "activeGens": [
+        1, 2, 3, 4, 5, 6, 7, 8
+      ],
+      "maxHints": 3,
+      "maxWrongGuesses": 6,
+      "hintsAllowed": true,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": true,
+      "showIndexHint": true,
+      "showTypeHint": true,
+      "showStreak": true,
+      "infiniteGuesses": true,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "imagePartFilter": 0,
+      "showPokemonOnFlee": true,
+      "showPokemonCry": true,
+      "timerMode": true
+    }
   }
 ]

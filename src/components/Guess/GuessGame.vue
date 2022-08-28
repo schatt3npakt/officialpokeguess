@@ -140,7 +140,7 @@
               :data-key-index="index"
             >{{letter}}</div>
 
-            <button v-show="playPokemonCry" @click="playCryHandler()" class="cry-hint">Play Cry</button>
+            <button v-show="playPokemonCry" @click="playCryHandler()" @mouseenter="hoverhandler()" class="cry-hint">Play Cry</button>
 
             <div v-if="showGenHint" class="gen-hint">
               Gen {{ activePokemonGeneration }}
@@ -163,6 +163,12 @@
             >
               {{ text.types[arrayType][language] }}
             </span>
+            </div>
+
+            <div class="counter-hint" :class="{short: counter <= 10}" v-if="isTimerEnabled">
+              <span>00</span>
+              <span class="counter__colon">:</span>
+              <span>{{ counter.toString().padStart(2, '0') }}</span>
             </div>
 
             <div class="rarity-hint">
@@ -206,6 +212,7 @@ import { playFleeSound, playGuessSound, playGuessWrongSound, playPokemonSound, p
 import PokemonService from '../../pokemonService'
 
 const pokemonService = new PokemonService()
+const timerTimeouts = []
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -250,6 +257,12 @@ function getAllIndexes (arr, val) {
 
 export default {
   computed: {
+    isTimerEnabled () {
+      return this.$store.state.guessModule.gameOptions.timerMode
+    },
+    counter () {
+      return this.$store.state.guessModule.gameState.counter
+    },
     isMythical () {
       return this.$store.state.guessModule.gameState.specialPokemon === 'mythical'
     },
@@ -412,6 +425,19 @@ export default {
     resetPokemon (initialDelay = true) {
       this.$store.commit('resetPokemon', initialDelay)
       this.$store.state.guessModule.gameState.hintsUsed = 0
+      this.$store.state.guessModule.gameState.counter = 20
+
+      if (this.isTimerEnabled) {
+        for (const timeout of timerTimeouts) {
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+        }
+
+        window.setTimeout(() => {
+          this.reduceTimer()
+        }, 3000)
+      }
     },
     checkForWin () {
       const pokeimage = document.querySelector('.pokeimage')
@@ -422,6 +448,12 @@ export default {
       const gameState = this.$store.state.guessModule.gameState
 
       if (letters.length === revealedLetters.length) {
+        for (const timeout of timerTimeouts) {
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+        }
+
         pokeimage.classList.add('reveal')
         window.setTimeout(() => {
           playPokemonSound(this.pokemonId)
@@ -482,6 +514,12 @@ export default {
       const gameOptions = this.$store.state.guessModule.gameOptions
 
       if (letters.length !== revealedLetters.length && gameState.wrongGuesses >= gameOptions.maxWrongGuesses) {
+        for (const timeout of timerTimeouts) {
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+        }
+
         if (this.showPokemonOnFlee === false) {
           pokeimage.classList.add('flee')
           gameState.guessFeedback = this.text.feedbackOptions.fail[this.language]
@@ -570,9 +608,34 @@ export default {
 
       this.checkForWin()
       this.checkForFail()
+    },
+    reduceTimer () {
+      if (this.counter === 0) {
+        this.resetPokemon(false)
+        return
+      }
+
+      this.$store.state.guessModule.gameState.counter--
+
+      const timeOutId = window.setTimeout(() => {
+        this.reduceTimer()
+      }, 1000)
+
+      timerTimeouts.push(timeOutId)
     }
   },
   mounted: function () {
+    this.$store.state.guessModule.gameState.counter = 20
+    if (this.isTimerEnabled) {
+      for (const timeout of timerTimeouts) {
+        if (timeout) {
+          clearTimeout(timeout)
+        }
+      }
+
+      this.reduceTimer()
+    }
+
     if (this.$store.state.guessModule.gameState.resetPokemonFromGameMode) {
       this.resetPokemon(false)
       this.$store.state.guessModule.gameState.resetPokemonFromGameMode = false
@@ -651,6 +714,7 @@ export default {
 }
 
 .pokemon-skip-button {
+  border: none;
   background-color: var(--theme-color);
   color: var(--contrast-color);
   padding: 5px;
@@ -1203,6 +1267,7 @@ export default {
       .cry-hint {
         background-color: var(--theme-color);
         color: var(--contrast-color);
+        border: none;
         padding: 2px;
         border-radius: 10px;
         position: absolute;
@@ -1218,6 +1283,12 @@ export default {
           left: -97px;
           top: 35px;
           cursor: pointer;
+          transform: scale(1);
+          transition: transform 0.25s ease-out;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
 
@@ -1231,6 +1302,25 @@ export default {
           font-size: 20px;
           left: -80px;
           top: 0;
+        }
+      }
+
+      .counter-hint {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        font-size: 12px;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+        transition: color 0.25s ease-in-out;
+
+        @media (min-width: 720px) {
+          font-size: 30px;
+          top: -85px;
+        }
+
+        &.short {
+          color: #C22E28;
         }
       }
 

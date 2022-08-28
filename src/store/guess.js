@@ -35,9 +35,11 @@ const guessModule = {
       showPartOfImage: false,
       imagePartFilter: 0,
       showPokemonOnFlee: false,
-      showPokemonCry: true
+      showPokemonCry: true,
+      timerMode: false
     },
     gameState: {
+      counter: 20,
       resetPokemonFromGameMode: false,
       firstPokemonLoaded: false,
       availablePokemon: 0,

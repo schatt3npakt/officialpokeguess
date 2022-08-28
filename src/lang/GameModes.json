@@ -58,5 +58,17 @@
       "de": "Kannst du ein Pokémon nur anhand seines Rufs erraten?",
       "fr": "Can you guess the Pokémon, just from its cry?"
     }
+  },
+  "timerModeActive": {
+    "title": {
+      "en": "Timer Mode",
+      "de": "Timer Mode",
+      "fr": "Timer Mode"
+    },
+    "description": {
+      "en": "The clock is running! Can you guess Pokémon fast enough?",
+      "de": "Die Zeit läuft! Kannst du die Pokémon schnell genug erraten?",
+      "fr": "Can you guess the Pokémon, just from its cry?"
+    }
   }
 }

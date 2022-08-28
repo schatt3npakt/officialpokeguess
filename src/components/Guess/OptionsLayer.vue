@@ -173,6 +173,13 @@
                 :is-on="oneGuessOnly"
               />
             </li>
+            <li>
+              <Toggle
+                :toggle-label="text.timerModeActive[language]"
+                @click.native="timerModeActiveToggleClickHandler"
+                :is-on="timerModeActive"
+              />
+            </li>
           </ul>
         </div>
       </div>
@@ -263,6 +270,9 @@ export default {
     },
     showPokemonCry () {
       return this.$store.state.guessModule.gameOptions.showPokemonCry
+    },
+    timerModeActive () {
+      return this.$store.state.guessModule.gameOptions.timerMode
     }
   },
   data: function () {
@@ -314,6 +324,10 @@ export default {
     },
     cryToggleClickHandler () {
       this.$store.state.guessModule.gameOptions.showPokemonCry = !this.$store.state.guessModule.gameOptions.showPokemonCry
+    },
+    timerModeActiveToggleClickHandler () {
+      this.isGenToggleInteracted = true
+      this.$store.state.guessModule.gameOptions.timerMode = !this.$store.state.guessModule.gameOptions.timerMode
     },
     onlyUncaughtToggleClickHandler () {
       this.isGenToggleInteracted = true

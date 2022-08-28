@@ -2,7 +2,8 @@ import { Howl } from 'howler'
 
 function playSound (sound) {
   const clickSound = new Howl({
-    src: [sound]
+    src: [sound],
+    volume: 0.5
   })
 
   if (localStorage.getItem('muteAudioIsActive') === 'false') {
@@ -55,14 +56,14 @@ export function playResetSound () {
 }
 
 export function playBgm () {
-  const clickSound = new Howl({
-    src: ['/sfx/bgm.ogg'],
-    loop: true
-  })
+  // const clickSound = new Howl({
+  //   src: ['/sfx/bgm.ogg'],
+  //   loop: true
+  // })
 
-  if (localStorage.getItem('muteAudioIsActive') === 'false') {
-    clickSound.play()
-  }
+  // if (localStorage.getItem('muteAudioIsActive') === 'false') {
+  //   clickSound.play()
+  // }
 }
 
 export function playPokemonSound (id) {

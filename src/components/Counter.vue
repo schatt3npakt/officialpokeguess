@@ -1,9 +1,12 @@
 <template>
   <div class="counter-wrapper">
     <div class="counter" :class="{day: isDay}">
-      <span>{{ hours }}</span>
-      <span class="counter__colon">:</span>
-      <span>{{ minutes }}</span>
+      <div>
+        <span>{{ hours }}</span>
+        <span class="counter__colon">:</span>
+        <span>{{ minutes }}</span>
+      </div>
+
       <span v-if="isDay">
         <svg width="100%" height="100%" viewBox="0 0 85 86" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"

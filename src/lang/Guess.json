@@ -144,6 +144,11 @@
     "de": "1 Versuch-Modus",
     "fr": "Une supposition seulement"
   },
+  "timerModeActive": {
+    "en": "Timer Mode",
+    "de": "Timer Mode",
+    "fr": "Timer Mode"
+  },
   "showPartOfImage": {
     "en": "Show only part of the silhouette",
     "de": "Zeige nur einen Teil des Umrisses",
