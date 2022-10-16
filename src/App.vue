@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="app" :class="{day: isDay, gameboy: gameBoyModeIsActive}">
-    <div v-show="this.showNotice === true" class="audio-notice" @click="showNoticeClickHandler()">
+    <div v-show="this.showNotice === true" class="options-notice" @click="showNoticeClickHandler()">
       <div class="modal">
-        {{text.audioNotice[language]}}
+        {{text.optionsNotice[language]}}
 
-        <button>{{text.audioNoticeAccept[language]}}</button>
+        <button>{{text.optionsNoticeAccept[language]}}</button>
       </div>
     </div>
 
@@ -207,7 +207,7 @@ html {
     height: 100%;
   }
 
-  .audio-notice {
+  .options-notice {
     z-index: 6;
     display: block;
     position: fixed;
@@ -220,7 +220,7 @@ html {
       padding: 15px;
       border: 3px solid var(--theme-color);
       border-radius: 15px;
-      font-size: 20px;
+      font-size: 14px;
       color: var(--theme-color);
       position: absolute;
       top: 50%;
@@ -228,6 +228,10 @@ html {
       transform: translate(-50%, -50%);
       background-color: var(--contrast-color);
       max-width: 400px;
+
+      @media (min-width: 720px) {
+        font-size: 20px;
+      }
     }
 
     button {
@@ -238,10 +242,14 @@ html {
       display: block;
       margin: 15px auto 0 auto;
       padding: 10px 20px;
-      font-size: 20px;
+      font-size: 14px;
       cursor: pointer;
       transition: transform 0.25s ease-in-out;
       transform: scale(1);
+
+      @media (min-width: 720px) {
+        font-size: 20px;
+      }
 
       &:hover {
         transform: scale(1.1);

@@ -24,6 +24,11 @@
     "de": "Aus",
     "fr": "Off"
   },
+  "playCry": {
+    "en": "Play cry",
+    "de": "Ruf abspielen",
+    "fr": "Jouer à l'appel"
+  },
   "reloadHint": {
     "en": "Changing this option loads a new Pokémon.",
     "de": "Das Ändern dieser Einstellung lädt ein neues Pokémon.",

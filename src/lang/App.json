@@ -9,12 +9,12 @@
     "de": "Neue Inhalte sind verfügbar!",
     "fr": "Une mise à jour est disponible!"
   },
-  "audioNotice": {
-    "en": "This game features music and sounds. If you are on Safari, those sounds might not play unless you allow them.",
-    "de": "Dieses Spiel beinhaltet Soundeffekte und Musik. Wenn du Safari benutzt, werden sie möglicherweise nicht abgespielt, bis du Sounds erlaubst.",
-    "fr": "Ce jeu comprend des effets sonores et de la musique. Si vous utilisez Safari, ils peuvent ne pas jouer tant que vous n'autorisez pas les sons!"
+  "optionsNotice": {
+    "en": "Welcome to Pokeguess! If you want to customize your game, click the Cog-Icon in the bottom left. Or select a game mode from the menu!",
+    "de": "Willkommen bei Pokeguess! Wenn du dein Spiel anpassen willst, klicke auf das Zahnrad unten links oder wähle einen Spielmodus im Hauptmenü!",
+    "fr": "Bienvenue sur Pokeguess ! Si vous souhaitez personnaliser votre jeu, cliquez sur l'icône Cog en bas à gauche. Ou sélectionnez un mode de jeu dans le menu !"
   },
-  "audioNoticeAccept": {
+  "optionsNoticeAccept": {
     "en": "Close",
     "de": "Schließen",
     "fr": "Conclure"

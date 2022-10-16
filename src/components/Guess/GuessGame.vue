@@ -140,7 +140,9 @@
               :data-key-index="index"
             >{{letter}}</div>
 
-            <button v-show="playPokemonCry" @click="playCryHandler()" @mouseenter="hoverhandler()" class="cry-hint">Play Cry</button>
+            <button v-show="playPokemonCry" @click="playCryHandler()" @mouseenter="hoverhandler()" class="cry-hint" :class="language">
+              Play Cry
+            </button>
 
             <div v-if="showGenHint" class="gen-hint">
               Gen {{ activePokemonGeneration }}
