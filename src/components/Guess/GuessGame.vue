@@ -670,7 +670,7 @@ export default {
       if (isCharacterKeyPress(evt)) {
         if (window.location.href.indexOf('player') === -1 && window.location.href.indexOf('pokedex') === -1 && this.$store.state.optionsIsOpen === false) {
           for (const key of keys) {
-            if (key.innerHTML === evt.key) {
+            if (key.innerHTML === evt.key && key.classList.contains('disabled') === false) {
               this.checkForCorrectGuess(key, evt.key)
             }
           }
