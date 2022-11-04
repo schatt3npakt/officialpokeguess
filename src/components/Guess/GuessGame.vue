@@ -1531,7 +1531,7 @@ export default {
 
 @keyframes reveal-and-bounce {
   0% {
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1) translateZ(0);
     filter:
       brightness(0)
       drop-shadow(2px 0px 0px var(--theme-color))
@@ -1541,7 +1541,7 @@ export default {
   }
 
   15% {
-    transform: translateX(-50%) scale(0.9);
+    transform: translateX(-50%) scale(0.9) translateZ(0);
     filter:
       brightness(0)
       drop-shadow(2px 0px 0px var(--theme-color))
@@ -1551,7 +1551,7 @@ export default {
   }
 
   85% {
-    transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.1) translateZ(0);
     filter:
       brightness(1)
       drop-shadow(2px 0px 0px var(--theme-color))
@@ -1561,7 +1561,7 @@ export default {
   }
 
   100% {
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1) translateZ(0);
     filter:
       brightness(1)
       drop-shadow(2px 0px 0px var(--theme-color))
