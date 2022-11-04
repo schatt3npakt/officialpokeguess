@@ -45,9 +45,9 @@
           />
 
           <Toggle
-            @click.native="muteAudioClickHandler"
-            :toggle-label="text.muteAudio[language]"
-            :is-on="muteAudioIsActive"
+            @click.native="enableAudioClickHandler"
+            :toggle-label="text.enableAudio[language]"
+            :is-on="enableAudioIsActive"
           />
         </div>
 
@@ -109,8 +109,8 @@ export default {
     gameBoyModeIsActive () {
       return this.$store.state.gameBoyModeIsActive
     },
-    muteAudioIsActive () {
-      return this.$store.state.muteAudioIsActive
+    enableAudioIsActive () {
+      return this.$store.state.enableAudioIsActive
     },
     showNameBelowClockIsActive () {
       return this.$store.state.showUserNameBelowClock === 'true'
@@ -179,15 +179,13 @@ export default {
         document.documentElement.style.setProperty('--theme-color', this.currentColor)
       }
     },
-    muteAudioClickHandler () {
-      this.$store.state.muteAudioIsActive = !this.$store.state.muteAudioIsActive
+    enableAudioClickHandler () {
+      this.$store.state.enableAudioIsActive = !this.$store.state.enableAudioIsActive
 
-      if (this.$store.state.muteAudioIsActive) {
-        Howler.mute(true)
-        localStorage.setItem('muteAudioIsActive', 'true')
-      } else {
+      if (this.$store.state.enableAudioIsActive) {
         Howler.mute(false)
-        localStorage.setItem('muteAudioIsActive', 'false')
+      } else {
+        Howler.mute(true)
       }
     },
     showNameBelowClockClickHandler () {
@@ -270,6 +268,8 @@ export default {
     }
   },
   mounted () {
+    Howler.mute(true)
+
     if (!this.$store.state.gameBoyModeIsActive) {
       this.setColor(this.currentColor)
     } else {

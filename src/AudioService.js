@@ -6,9 +6,7 @@ function playSound (sound) {
     volume: 0.5
   })
 
-  if (localStorage.getItem('muteAudioIsActive') === 'false') {
-    clickSound.play()
-  }
+  clickSound.play()
 }
 
 export function playToggleOnSound () {

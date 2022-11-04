@@ -39,9 +39,9 @@
     "de": "Retro-Modus aktivieren",
     "fr": "Activer le mode rétro"
   },
-  "muteAudio": {
-    "en": "Mute audio",
-    "de": "Sound deaktivieren",
-    "fr": "Mute audio"
+  "enableAudio": {
+    "en": "Enable audio",
+    "de": "Sound aktivieren",
+    "fr": "Enable audio"
   }
 }

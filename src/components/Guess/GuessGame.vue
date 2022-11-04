@@ -377,7 +377,7 @@ export default {
       return this.$store.state.guessModule.gameOptions.showPokemonOnFlee
     },
     playPokemonCry () {
-      return this.$store.state.muteAudioIsActive === false && this.$store.state.guessModule.gameOptions.showPokemonCry
+      return this.$store.state.enableAudioIsActive === true && this.$store.state.guessModule.gameOptions.showPokemonCry
     }
   },
   data: function () {
@@ -421,7 +421,7 @@ export default {
       playPokemonSound(this.pokemonId)
     },
     testForRevealingCharacter (char) {
-      const regEx = new RegExp('[0-9\' :.,♂♀-♀♂]')
+      const regEx = new RegExp('[0-9\' :.,♂♀-]')
       return regEx.test(char)
     },
     resetPokemon (initialDelay = true) {
