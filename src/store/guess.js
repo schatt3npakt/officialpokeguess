@@ -17,7 +17,7 @@ const guessModule = {
     },
     gameOptions: {
       activeGens: [
-        1, 2, 3, 4, 5, 6, 7, 8
+        1, 2, 3, 4, 5, 6, 7, 8, 9
       ],
       excludeGuessedPokemon: true,
       maxHints: 3,
@@ -80,6 +80,9 @@ const guessModule = {
       },
       {
         id: 8, start: 810, end: 905
+      },
+      {
+        id: 9, start: 906, end: 1008
       }
     ],
     types: [

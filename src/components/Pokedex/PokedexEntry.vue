@@ -59,22 +59,7 @@ export default {
       return 'https://pokeguess.bitheart.de/pokemon/' + id + '.png'
     },
     constructThumbnailLink (id) {
-      const noIconAvailable = [
-        898,
-        899,
-        900,
-        901,
-        902,
-        903,
-        904,
-        905
-      ]
-
-      if (noIconAvailable.includes(id)) {
-        return 'https://pokeguess.bitheart.de/pokemon/' + id + '.png'
-      } else {
-        return 'https://pokeguess.bitheart.de/pokemon/icons/' + id + '.png'
-      }
+      return 'https://pokeguess.bitheart.de/pokemon/icons/' + id + '.png'
     },
     getPokemonName (id) {
       return pokemonService.getName(id, this.language)

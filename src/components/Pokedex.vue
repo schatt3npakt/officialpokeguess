@@ -211,6 +211,20 @@
               :fallback-index="index + 810"
             />
           </Collapsible>
+
+          <Collapsible
+            :show-on-desktop="true"
+            button-text="Gen 9">
+            <PokedexEntry
+              :class="{active: index + 906 === activePokemonId}"
+              v-for="(poke, index) in gens[8]"
+              @click.native="pokeDexEntryClickHandler(index + 905)"
+              :key="poke"
+              :data-title="pokemon[index + 809].toLowerCase()"
+              v-bind="getPokemonCaught(index + 906)"
+              :fallback-index="index + 906"
+            />
+          </Collapsible>
         </div>
       </div>
     </Layer>
@@ -255,7 +269,8 @@ export default {
         this.pokemon.slice(495, 650),
         this.pokemon.slice(650, 722),
         this.pokemon.slice(722, 810),
-        this.pokemon.slice(810, 907)
+        this.pokemon.slice(810, 907),
+        this.pokemon.slice(907, 1009)
       ]
     }
   },
