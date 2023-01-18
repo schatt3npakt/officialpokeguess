@@ -1533,41 +1533,25 @@ export default {
   0% {
     transform: translateX(-50%) scale(1) translateZ(0);
     filter:
-      brightness(0)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(0);
   }
 
   15% {
     transform: translateX(-50%) scale(0.9) translateZ(0);
     filter:
-      brightness(0)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(0);
   }
 
   85% {
     transform: translateX(-50%) scale(1.1) translateZ(0);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   100% {
     transform: translateX(-50%) scale(1) translateZ(0);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 }
 
@@ -1713,33 +1697,21 @@ export default {
   0% {
     transform: translateX(-50%) scale(1);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   50% {
     opacity: 1;
     transform: translateX(-70%) scale(0.9);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   100% {
     opacity: 0;
     transform: translateX(100%) scale(1);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 }
 
@@ -1747,43 +1719,27 @@ export default {
   0% {
     transform: translateX(-50%) scale(1);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   50% {
     transform: translateX(-50%) scale(1.1);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   90% {
     opacity: 1;
     transform: translateX(-50%) scale(0.2);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 
   100% {
     opacity: 0;
     transform: translateX(-50%) scale(0.2);
     filter:
-      brightness(1)
-      drop-shadow(2px 0px 0px var(--theme-color))
-      drop-shadow(-2px 0px 0px var(--theme-color))
-      drop-shadow(0px 2px 0px var(--theme-color))
-      drop-shadow(0px -2px 0px var(--theme-color));
+      brightness(1);
   }
 }
 

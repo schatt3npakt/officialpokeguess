@@ -270,7 +270,7 @@ export default {
         this.pokemon.slice(650, 722),
         this.pokemon.slice(722, 810),
         this.pokemon.slice(810, 907),
-        this.pokemon.slice(907, 1009)
+        this.pokemon.slice(907, 1010)
       ]
     }
   },
