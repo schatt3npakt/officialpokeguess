@@ -24,12 +24,14 @@
 
 ### Backlog
 
+- solve scrollbar popping in on pokedex causing a layout shift
+- add opening animation to generation accordions on pokedex
 - Language italian
 - shinies / alola versions?
 - data section: pokedex entries for every caught pokemon in pokedex
 - pokemon gen name in name options layer
-- fix pokemon image positioning
-- nightwatch testing and screenshot generation for mobile, tablet and desktop viewports (define test cases)
+- fix pokemon image positioning,  add outline in app secondary colour to overlaying game components (keyboard / pokemon hint texts)
+- e2e testing and screenshot generation for mobile, tablet and desktop viewports (define test cases and screens)
 - streak in game view (pokemon caught without flee) under skip button
 - internationalize skip button
 - flee reveal, show whole image if only show part of image is selected
