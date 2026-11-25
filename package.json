@@ -1,37 +1,21 @@
 {
-  "name": "app",
-  "version": "0.1.0",
+  "name": "pokeguess",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
+  "description": "Pokemon Guess! - buildless web components app, deployable to any static host (www/).",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "howler": "^2.2.3",
-    "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "serve": "node tools/serve.mjs",
+    "test": "node --test test/*.test.js",
+    "lint": "eslint .",
+    "format": "prettier --write \"www/**/*.{js,css,html}\" \"tools/**/*.mjs\" \"test/**/*.js\"",
+    "sw": "node tools/build-sw-manifest.mjs",
+    "images": "sh tools/convert-images.sh"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
-    "@vue/cli-plugin-router": "^4.5.14",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1"
   }
 }

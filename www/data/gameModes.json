@@ -1,0 +1,131 @@
+[
+  {
+    "id": 0,
+    "title": "casual",
+    "gameOptions": {
+      "activeGens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "hintsAllowed": true,
+      "showPokeImage": true,
+      "revealCaught": true,
+      "showGenHint": true,
+      "showIndexHint": true,
+      "showTypeHint": true,
+      "infiniteGuesses": true,
+      "oneGuessOnly": false,
+      "showPartOfImage": false,
+      "showPokemonOnFlee": true
+    }
+  },
+  {
+    "id": 1,
+    "title": "oneShotAll",
+    "gameOptions": {
+      "activeGens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "hintsAllowed": false,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "infiniteGuesses": false,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "showPokemonOnFlee": false
+    }
+  },
+  {
+    "id": 2,
+    "title": "oneShotClassic",
+    "gameOptions": {
+      "activeGens": [
+        1
+      ],
+      "hintsAllowed": false,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "infiniteGuesses": false,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "showPokemonOnFlee": false
+    }
+  },
+  {
+    "id": 3,
+    "title": "blind",
+    "gameOptions": {
+      "activeGens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "hintsAllowed": false,
+      "showPokeImage": false,
+      "revealCaught": false,
+      "showGenHint": false,
+      "showIndexHint": false,
+      "showTypeHint": false,
+      "infiniteGuesses": true,
+      "oneGuessOnly": false,
+      "showPartOfImage": false,
+      "showPokemonOnFlee": true
+    }
+  },
+  {
+    "id": 4,
+    "title": "timerModeActive",
+    "gameOptions": {
+      "activeGens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "hintsAllowed": true,
+      "showPokeImage": true,
+      "revealCaught": false,
+      "showGenHint": true,
+      "showIndexHint": true,
+      "showTypeHint": true,
+      "infiniteGuesses": true,
+      "oneGuessOnly": true,
+      "showPartOfImage": false,
+      "showPokemonOnFlee": true,
+      "showPokemonCry": true,
+      "timerMode": true
+    }
+  }
+]

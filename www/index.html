@@ -1,0 +1,38 @@
+<!doctype html>
+<html translate="no" lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Pokemon Guess! | A fanmade pokemon guessing game</title>
+    <meta
+      name="description"
+      content="Pokemon Guess! is a pokemon guessing game, where you guess pokemon hangman-style! Prove your knowledge and just have fun!"
+    />
+    <meta name="theme-color" content="#00b894" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link
+      rel="preload"
+      href="assets/fonts/nunito-sans-v12-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="data/pokemon.json" as="fetch" crossorigin />
+    <link rel="preload" href="data/i18n.json" as="fetch" crossorigin />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="modulepreload" href="js/core/base-element.js" />
+    <link rel="modulepreload" href="js/components/guess/pg-guess-view.js" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but Pokemon Guess! doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <pg-app></pg-app>
+  </body>
+</html>
