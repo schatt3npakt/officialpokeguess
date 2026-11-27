@@ -1,4 +1,49 @@
-v.1.0.0
+# TODO
+
+## MUST
+
+- Wait for Image to fully Load before interactive
+- confirm delete data dialog
+- Tutorial
+- Overwrite caught pokemon data
+
+## SHOULD
+
+- Fix Timer Mode
+- set pokemon to start page
+- Design option: show favorite pokemon in app background, silhouette only, 50% transparency, bottom left corner -25% position. select from options menu via searchable dropdown of caught pokemon
+- possible to colour pokemon silhouette into app main colour?
+
+## COULD
+
+- tamagotchi features For selected Pokemon
+- Items: Pokebälle für Versuche, Beeren um zufällig Buchstaben aufzudecken
+- Badge shimmer
+- close menus and open menus with keyboard
+- gamepad-support
+
+### Backlog
+
+- solve scrollbar popping in on pokedex causing a layout shift
+- add opening animation to generation accordions on pokedex
+- Language italian
+- shinies / alola versions?
+- data section: pokedex entries for every caught pokemon in pokedex
+- pokemon gen name in name options layer
+- fix pokemon image positioning,  add outline in app secondary colour to overlaying game components (keyboard / pokemon hint texts)
+- e2e testing and screenshot generation for mobile, tablet and desktop viewports (define test cases and screens)
+- streak in game view (pokemon caught without flee) under skip button
+- internationalize skip button
+- flee reveal, show whole image if only show part of image is selected
+- prevent inputs after a letter has been guessed correctly or revealed via hint
+- fullscreen mode from options menu
+- lift node version to current
+- hover scale nicht auf inputs, nur label
+
+## CHANGELOG
+
+### v.1.0.0
+
 X Refactoring
 X version number
 X Fanproject hint
@@ -22,39 +67,3 @@ X Add retro mode for pokemon images
 X GameBoyMode
 X load pokemon on leaving option screen if toggle was changed
 X Pokedex Search by Number or ID
-prevent input on reset
-
-## MUST
-Wait for Image to Load
-confirm delete data layer
-Tutorial layers
-pokemon npm wrapper server caching
-Overwrite caught pokemon
-
-## SHOULD
-save local storage guesses
-unify terminology
-Timer
-set pokemon to start page
-
-## COULD
-tamagotchi features For selected Pokemon
-Items: Pokebälle für Versuche, Beeren um zufällig Buchstaben aufzudecken
-Badge shimmer
-close menus and open menus with keyboard
-gamepad-support
-
-# FEEDBACK
-- Language italian
-- tutorial
-- shinies / alola versions?
-- type guessing game
-- favorite pokemon as background image
-- data section
-- pokemon gen name
-- internationale namen beim aufdecken
-- streak in main menu
-- flee reveal show whole image
-- prevent inputs after correct guesses
-- fullscreen mode
-- 

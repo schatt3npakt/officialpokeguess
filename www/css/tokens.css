@@ -1,0 +1,80 @@
+/* Design tokens and document-level styles. Component styles live in their shadow roots;
+   the custom properties below inherit into them. Theme values are set by js/core/theme.js. */
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/nunito-sans-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../assets/fonts/nunito-sans-v12-latin-900.woff2') format('woff2');
+}
+
+:root {
+  --contrast-color: #2d3436;
+  --theme-color: #00b894;
+  --img-blend: normal;
+  --gb-filter: none;
+  --gb-shadow: none;
+  --perfect-color: #eee8aa;
+
+  --type-color-normal: #a8a77a;
+  --type-color-fighting: #c22e28;
+  --type-color-flying: #a98ff3;
+  --type-color-poison: #a33ea1;
+  --type-color-ground: #e2bf65;
+  --type-color-rock: #b6a136;
+  --type-color-bug: #a6b91a;
+  --type-color-ghost: #735797;
+  --type-color-steel: #b7b7ce;
+  --type-color-fire: #ee8130;
+  --type-color-water: #6390f0;
+  --type-color-grass: #7ac74c;
+  --type-color-electric: #f7d02c;
+  --type-color-psychic: #f95587;
+  --type-color-ice: #96d9d6;
+  --type-color-dragon: #6f35fc;
+  --type-color-dark: #705746;
+  --type-color-fairy: #d685ad;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--contrast-color);
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+}
+
+::selection {
+  background: var(--theme-color);
+  color: var(--contrast-color);
+}
+
+pg-app {
+  display: block;
+}
+
+pg-app:not(:defined) {
+  visibility: hidden;
+}
